@@ -47,7 +47,6 @@ CocoPLANER is an intelligent travel planning assistant that combines **tradition
 - **Database:** MongoDB  
 - **APIs:** Amadeus Flight API  
 - **Container:** Docker  
-- **Web Framework:** Flask  
 - **Data Processing:** Pandas  
 
 ---
