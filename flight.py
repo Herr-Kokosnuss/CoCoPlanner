@@ -90,7 +90,7 @@ class AmadeusAPI:
     # Keep existing helper methods unchanged
     def parse_duration(self, duration_str):
         """Parse PT duration format to minutes"""
-        duration = duration_str[2:]  # Remove 'PT'
+        duration = duration_str[2:]  
         hours = 0
         minutes = 0
         

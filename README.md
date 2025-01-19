@@ -34,6 +34,11 @@ CocoPLANER is an intelligent travel planning assistant that combines **tradition
 - **Docker Support:** Containerized deployment  
 - **Email System:** SMTP-based notification system  
 
+### 5. Automation
+- **Automation System** through GitHub Actions and AWS  
+  - Automated Docker builds and ECR pushes
+  - Auto-scaling group management
+  - Continuous deployment pipeline
 ---
 
 ## Technical Stack
