@@ -1,2 +1,4 @@
 __pycache__
 cocoplanner.code-workspace
+k8s/secrets.yaml
+.env

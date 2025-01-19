@@ -1,0 +1,81 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cocoplanner
+  labels:
+    app: cocoplanner
+spec:
+  replicas: 2  # We run 2 pods for high availability
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1        # How many pods we can add at a time
+      maxUnavailable: 0  # Number of pods that can be unavailable during the update
+  selector:
+    matchLabels:
+      app: cocoplanner
+  template:
+    metadata:
+      labels:
+        app: cocoplanner
+    spec:
+      containers:
+      - name: cocoplanner
+        image: ${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/cocoplanner:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "200m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        env:
+        - name: SERPER_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: cocoplanner-secrets
+              key: serper-api-key
+        - name: OPENAI_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: cocoplanner-secrets
+              key: openai-api-key
+        - name: EMAIL_SENDER
+          valueFrom:
+            secretKeyRef:
+              name: cocoplanner-secrets
+              key: email-sender
+        - name: EMAIL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: cocoplanner-secrets
+              key: email-password
+        - name: AMADEUS_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: cocoplanner-secrets
+              key: amadeus-api-key
+        - name: AMADEUS_API_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: cocoplanner-secrets
+              key: amadeus-api-secret
+        - name: MONGODB_ATLAS_URI
+          valueFrom:
+            secretKeyRef:
+              name: cocoplanner-secrets
+              key: mongodb-atlas-uri
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 80
+          initialDelaySeconds: 15
+          periodSeconds: 20
