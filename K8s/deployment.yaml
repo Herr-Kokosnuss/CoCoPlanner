@@ -5,12 +5,12 @@ metadata:
   labels:
     app: cocoplanner
 spec:
-  replicas: 2  # We run 2 pods for high availability
+  replicas: 2  
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxSurge: 1        # How many pods we can add at a time
-      maxUnavailable: 0  # Number of pods that can be unavailable during the update
+      maxSurge: 1        
+      maxUnavailable: 0  
   selector:
     matchLabels:
       app: cocoplanner

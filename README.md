@@ -48,6 +48,7 @@ CocoPLANER is an intelligent travel planning assistant that combines **tradition
 - **APIs:** Amadeus Flight API  
 - **Container:** Docker  
 - **Data Processing:** Pandas  
+- **Orchestration:** Kubernetes  
 
 ---
 
@@ -58,6 +59,14 @@ The application is built around a **command-line interface** that integrates wit
 - **Storage System** using MongoDB  
 - **Notification System** via SMTP  
 - **Airport Information System** using local database  
+- **Automation System** through GitHub Actions and AWS  
+  - Automated Docker builds and ECR pushes
+  - Auto-scaling group management
+  - Continuous deployment pipeline
+- **Kubernetes System** for container orchestration  
+  - Deployment configuration for pod management
+  - Service setup for load balancing
+  - Secrets management for sensitive data
 
 ---
 
@@ -71,6 +80,7 @@ The application is built around a **command-line interface** that integrates wit
 7. **Airport System:** Code lookup (`airport_lookup.py`)  
 8. **Communication:** Email system (`send_email.py`)  
 9. **Plan Management:** Retrieval system (`retrieve_plan.py`)  
+10. **Kubernetes Config:** Container orchestration (`K8s/*.yaml`)  
 
 ---
 
