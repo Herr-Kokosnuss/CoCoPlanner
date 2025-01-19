@@ -1,7 +1,7 @@
-# CocoPLANER - AI-Powered Travel Planning Assistant
+# CoCoPlanner - AI-Powered Travel Planning Assistant
 
 ## Project Overview
-CocoPLANER is an intelligent travel planning assistant that combines **traditional travel planning** with **modern AI technology**. Built with **Python** and powered by **CrewAI**, it provides personalized travel itineraries, real-time flight information, and comprehensive travel management through an interactive command-line interface.
+CoCoPlanner is an intelligent travel planning assistant that combines **traditional travel planning** with **modern AI technology**. Built with **Python** and powered by **CrewAI**, it provides personalized travel itineraries, real-time flight information, and comprehensive travel management through an interactive command-line interface.
 
 ---
 
@@ -108,4 +108,4 @@ This repository contains the core application code for demonstration purposes. C
 
 ---
 
-*"Old-World Charm, Future-Driven Travel" - CocoPLANER*
+*"Old-World Charm, Future-Driven Travel" - CoCoPlanner*
