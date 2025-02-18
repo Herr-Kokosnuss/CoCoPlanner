@@ -888,8 +888,5 @@ def run_crew():
             time.sleep(2)
             return
 
-    # Continue with the rest of the planning process
-    # ... (rest of the function)
-
 if __name__ == "__main__":
     run_crew()
