@@ -1,5 +1,7 @@
 # CoCoPlanner - AI-Powered Travel Planning Assistant
 
+**AWS Cloud Infrastructure:** [Here](https://github.com/Herr-Kokosnuss/AWS-Infrastructure)
+
 ## Project Overview
 CoCoPlanner is an intelligent travel planning assistant that combines **traditional travel planning** with **modern AI technology**. Built with **Python** and powered by **CrewAI**, it provides personalized travel itineraries, real-time flight information, and comprehensive travel management through an interactive command-line interface.
 
